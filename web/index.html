@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght&500&display=swap"
+    />
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <title>Gerador de Resumos</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>Gerador de resumos</header>
+
+      <form action="#">
+        <div class="row">
+          <button>Selecionar PDF</button>
+        </div>
+
+        <div class="row range-slider">
+          <label>Complexidade</label>
+
+          <div class="range-slider_line">
+            <div id="slider_line" class="range-slider_line-fill"></div>
+          </div>
+
+          <input
+            type="range"
+            id="length"
+            min="0"
+            max="100"
+            value="50"
+            step="5"
+            oninput="getSlideValue()"
+          />
+          <h3 id="length-val">50</h3>
+        </div>
+
+        <!-- <div class="row">
+          <button>Gerar resumo</button>
+        </div> -->
+
+        <div class="row">
+          <button>
+            Baixar resumo
+            <i
+              class="far fa-arrow-alt-circle-down"
+              onclick="copyClipboard()"
+            ></i>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
